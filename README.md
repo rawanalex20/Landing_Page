@@ -1,2 +1,2 @@
-# Landing_Project
+# Landing_Page
 Udacity landing project submission
