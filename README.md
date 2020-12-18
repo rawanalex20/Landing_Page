@@ -14,5 +14,5 @@ Javascript file adds interactivity to web page.
 # Compatibilty
 Codes run on almost all browsers that supports HTML5.
 
-
-
+# Author
+Rawan Mohamed Abdelaziz
