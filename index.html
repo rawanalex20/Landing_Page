@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Manipulating the DOM</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <title>Manipulating the DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<!--Nav Bar-->
+
+    <!--Header element represents the header bar.
+    It contains the navigation menu and the dropdown menu -->
+    <header class="page_header">
+        <nav class="navbar_menu">
+            <!--Navigation menu element that starts empty then list of anchor elements are added by JS
+                Each anchor element refer to a section in the page-->
+            <ul id="navbar_list"></ul>
+            <!--dropdown menu with items refering to hypothetical other pages-->
+            <div class="dropdown">
+                <button onclick="dropdown()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">Settings</a>
+                    <a href="#">about</a>
+                    </div>
+                </div> 
+        </nav>
+    </header>
+<!--main-->
+
+    <!--Main contains sections of landing page.
+    A general style is applied on the active section
+    Each section contains a div element with certain structure.
+    Different styling is applied dynamically on each section 
+    by calling their unique ids and classes in the inner div when thein outer element is active-->
     
-    </head>
-    <body>
-        <header class="page_header">
-            <nav class="navbar_menu">
-                <ul id="navbar_list"></ul>
-                <div class="dropdown">
-                    <button onclick="dropdown()" class="dropbtn">Dropdown</button>
-                        <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Home</a>
-                        <a href="#">Settings</a>
-                        <a href="#">about</a>
-                        </div>
-                  </div> 
-            </nav>
-        </header>
-        <main>
-        <section id="section1" data-nav="Section 1" >
-            <div class="landing__container1">
-                <div id="section1_content">
-                    <h2>Section 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-            
-                    <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-                </div>
+    <main>
+    <section id="section1" data-nav="Section 1" >
+        <div class="landing__container1">
+            <div id="section1_content">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        
+                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
             </div>
-          </section>
-          <section id="section2" data-nav="Section 2">
+        </div>
+        </section>
+        <!--Section 2 contains 3 div elements. 
+        Unique styling is applied on each individually by calling "section2_content" class-->
+        <section id="section2" data-nav="Section 2">
+        <div class="landing__container">
+            <div class="section2_content">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
+        
+            </div>
+            <div class="section2_content">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
+            </div>
+            <div class="section2_content">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
+        
+            </div>
+        </div>
+        </section>
+        <section id="section3" data-nav="Section 3">
+        <div class="landing__container">
+            <div id="section3_content">
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        
+                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+            </div>
+        </div>
+        </section>
+        <section id="section4" data-nav="Section 4">
             <div class="landing__container">
-                <div class="section2_content">
-                    <h2>Section 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
-            
-                </div>
-                <div class="section2_content">
-                    <h2>Section 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
-                </div>
-                <div class="section2_content">
-                    <h2>Section 2</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus.</p>
-            
-                </div>
+            <div id="section4_content">
+                <h2>Section 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        
+                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
             </div>
-          </section>
-          <section id="section3" data-nav="Section 3">
-            <div class="landing__container">
-                <div id="section3_content">
-                    <h2>Section 3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-            
-                    <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-                </div>
-            </div>
-          </section>
-          <section id="section4" data-nav="Section 4">
-              <div class="landing__container">
-                <div id="section4_content">
-                    <h2>Section 4</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-            
-                    <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-                </div>
-            </div>
-          </section>
-        </main>
-          <footer>
-              footer
-          </footer>
-        <script src="js/app.js"></script>
-    </body>
+        </div>
+        </section>
+    </main>
+<!--footer-->
+    <footer>
+        footer
+    </footer>
+    <script src="js/app.js"></script>
+</body>
 </html>
