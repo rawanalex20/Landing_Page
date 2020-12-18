@@ -1,71 +1,21 @@
 
+/* General Styles for Whole Document */
 body{
     margin: 0;
-    background: #cdd5d7;
+    /*background: #cdd5d7;*/
 }
+
 main{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 0;
     scroll-behavior: smooth;
 }
 
-.dropdown:hover .navbar_menu {
-    display: block;
-  }
-
-#section1_content{
-    width: 50em;
-    text-align: left;
-    color: white;
-    padding: 2em 0 5em 10em;
-
-}
-#section1 .landing__container1{
-    background: linear-gradient(0deg, rgb(46, 63, 55) 0%, rgba(0,13,60,1) 100%);
-    margin: auto;
-}
 
 
-#section2 .landing__container{
-    display: flex;
-    padding: 0 4em 0em 4em;
-    
-}
-
-.section2_content{
-    width: 30em;
-    text-align: center;
-    padding: 2em;
-    margin: 5em 3em 5em 3em;
-    
-}
-
-.active_section .section2_content{
-    border: 1px solid;
-}
-
-#section3_content{
-    margin: 0 0 5em 0;
-    padding: 1em 10em 3em 10em;
-    
-}
-
-.active_section #section3_content{
-    background-color:#6c777d54;
-    color: whitesmoke;
-}
-
-#section4_content{
-    margin: 0 5em 5em 5em;
-    padding: 1em 5em 3em 5em;
-    
-}
-
-.active_section #section4_content{
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-
-
-
+/* Header Styles */
 header{
     background-color: black;
     filter: drop-shadow(0 0 0.75rem rgb(83, 94, 83));
@@ -75,8 +25,13 @@ header{
     border:10em;
     color: whitesmoke;
 }
-a{
-    color: whitesmoke;
+
+/* Navigation Menu Styles */
+nav{
+    display: grid;
+    grid-template-columns: 1400px;
+    grid-template-areas:
+    "a b"
 }
 
 nav ul{
@@ -98,6 +53,10 @@ nav li a:active{
     color: whitesmoke;
 }
 
+a{
+    color: whitesmoke;
+}
+
 #navbar_list a{
     text-decoration: none;
     padding: 1em;
@@ -106,35 +65,17 @@ nav li a:active{
     background-color: rgb(180, 202, 134);
 }
 
-main{
-    text-align: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 0;
-}
-
-.active_section .landing__container1, 
-.active_section .landing__container{
-
-    filter: drop-shadow(0 0 0.8rem rgb(41, 48, 41));
-}
-
+/* Style of anchor when referred section is active */
 .active_link{
     background-color: rgb(180, 202, 134);
 
 }
-footer{
-    text-align: center;
-    padding: 1em;
-    background-color: black;
-    color: whitesmoke;
-}
-nav{
-    display: grid;
-    grid-template-columns: 1400px;
-    grid-template-areas:
-    "a b"
-}
+
+
+/* Dropdown Styles */
+.dropdown:hover .navbar_menu {
+    display: block;
+  }
 
 .dropbtn {
     background-color: black;
@@ -172,34 +113,141 @@ nav{
     color: black;
 }
 
+/* Sections Contents Style */
+#section1_content{
+    width: 50%;
+    text-align: left;
+    color: white;
+    padding: 2em 0 5em 10em;
+
+}
+#section1 .landing__container1{
+    background: linear-gradient(0deg, rgb(46, 63, 55) 0%, rgba(0,13,60,1) 100%);
+    margin: auto;
+}
+
+
+#section2 .landing__container{
+    display: flex;
+    padding: 0 4em 0em 4em;
+    
+}
+
+.section2_content{
+    width: 30em;
+    text-align: center;
+    padding: 2em;
+    margin: 5em 3em 5em 3em;
+    
+}
+
+#section3_content{
+    margin: 0 0 5em 0;
+    padding: 1em 10em 3em 10em;
+    
+}
+
+#section4_content{
+    margin: 0 5em 5em 5em;
+    padding: 1em 5em 3em 5em;
+    
+}
+
+#section3 p,
+#section4 p{
+    padding-right: 2%;
+    padding-left: 2%;
+}
+#section3,
+#section4 {
+    width: auto;
+    /*width: 100%;*/
+}
+
+
+
+/* Active Section Styles */
+.active_section .landing__container1, 
+.active_section .landing__container{
+
+    filter: drop-shadow(0 0 0.8rem rgb(41, 48, 41));
+}
+
+
+.active_section .section2_content{
+    border: 1px solid;
+}
+
+
+
+.active_section #section3_content{
+    background-color:#6c777d54;
+    color: whitesmoke;
+}
+
+
+.active_section #section4_content{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+
+/* Footer Styles */
+footer{
+    text-align: center;
+    padding: 1em;
+    background-color: black;
+    color: whitesmoke;
+}
+
 .show {
     display:block;
 }
 
+/* Styles for Responsive Design*/
 @media screen and (max-width:800px) {
 
-    #section1_content{
+    .section2_content, 
+    #section2.landing__container, 
+    #section3, 
+    #section3_content, 
+    #section4_content{
         width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #section1_content{
+        width: 90%;
         text-align: left;
         color: white;
-        padding: 1em 2px 1em 2px;
+        padding: 1% 2% 1% 2%;
 
+    }
+    .landing__container,
+    .landing__container1{
+        margin: 0;
     }
     #section2 .landing__container{
         display: block;
-        padding: 0 4em 0em 4em;
+        padding: 0 4% 0 4%;
         
     }
     
     .section2_content{
-        width: 30em;
+        width: 30%;
         text-align: center;
-        padding: 2em;
-        margin: 5em 3em 5em 3em;
+        padding: 2%;
+        margin: 5% auto 5% auto;
         
     }
     nav{
         grid-template-columns: auto;
+    }
+    header{
+        width: 100%;
+    }
+    #section1 .landing__container1{
+        width: 100%
     }
 
 }
@@ -212,9 +260,22 @@ nav{
     #section2.landing__container, 
     #section3, 
     #section3_content, 
-    #section4_content0{
+    #section4_content{
         width: 100%;
         padding: 0;
+        margin: 0;
+    }
+    nav{
+        grid-template-columns: auto;
+    }
+    header{
+        width: 100%;
+    }
+    #section1 .landing__container1{
+        width: 100%
+    }
+    .landing__container,
+    .landing__container1{
         margin: 0;
     }
 
