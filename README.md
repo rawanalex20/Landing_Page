@@ -1,9 +1,10 @@
 # Landing_Page
 Udacity landing page project submission
+19/12/2020
 
 Program General Description
 ----------------------------
--This program is developed by HTML, CSS, JavaScrip and Web APIs.
+-This program is developed by HTML, CSS, JavaScript and Web APIs.
 It adds navigation menu items by JS, activates dynamically targeted section according on link click or scrolling up or down and highlights the active section in a certain way.
 Navigation bar also contains an extra dropdown menu for hypothetical pages.
 
