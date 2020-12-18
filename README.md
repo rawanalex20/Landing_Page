@@ -11,3 +11,8 @@ Navigation bar also contains an extra dropdown menu for hypothetical pages.
 -"index.html" in the root folder is the main web page. Other files are "styles.css" in "css" folder and "app.js" in "js" folder.
 Javascript file adds interactivity to web page.
 
+# Compatibilty
+Codes run on almost all browsers that supports HTML5.
+
+
+
